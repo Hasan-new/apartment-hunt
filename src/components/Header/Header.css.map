@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AACA,AAAA,CAAC,CAAA;EACE,UAAU,ECFD,MAAM;CDIjB",
     "sources": [
-        "Header.scss"
+        "Header.scss",
+        "../../sass/_main.scss"
     ],
     "names": [],
     "file": "Header.css"
