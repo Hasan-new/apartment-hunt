@@ -1,13 +1,14 @@
 import React from 'react';
 import { Button, Nav, Navbar } from 'react-bootstrap';
-import './Header.css'
+import './Header.css';
+// import './Header.scss'
 const Header = () => {
    return (
       <div>
          {/* bg="dark" variant="dark" */}
          <Navbar collapseOnSelect expand="lg"  className="d-flex justify-content-between font-weight-bold">
             <div>
-               <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>   
+               <Navbar.Brand className="brandNav" href="#home">React-Bootstrap</Navbar.Brand>   
             </div>
             <div>
                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
