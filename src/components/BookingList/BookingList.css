@@ -12,8 +12,31 @@
   background: white;
 }
 
+.user-page .userPageLeftSide .user-page-link .active_link {
+  color: #275A53;
+  font-weight: 500;
+}
+
+.user-page .userPageLeftSide .user-page-link .active_link:hover {
+  text-decoration: none;
+  cursor: context-menu;
+}
+
+.user-page .userPageLeftSide .user-page-link .dashboard_logo {
+  width: 15px;
+  height: 15px;
+}
+
+.user-page .userPageLeftSide .user-page-link .dashboard_link {
+  cursor: pointer;
+}
+
+.user-page .userPageLeftSide .user-page-link .dashboard_link:hover {
+  text-decoration: underline;
+}
+
 .user-page .userPageLeftSide .userPageLogo {
-  width: 150px;
+  width: 120px;
   margin: 50px 0 30px 0;
 }
 
@@ -25,6 +48,8 @@
   margin: 25px;
   border-radius: 15px;
   padding: 15px;
+  background-color: white;
+  max-height: 600px;
 }
 
 .user-page .userPageRightSide .rightSideMain th {
@@ -32,7 +57,7 @@
   font-size: 15px;
   font-weight: 500;
   color: #9a9a9a;
-  background: lightgray;
+  background: #F4F7FC;
   padding: 10px;
 }
 
@@ -40,8 +65,18 @@
   padding: 10px;
 }
 
+.user-page .userPageRightSide .rightSideMain td select {
+  border: 0;
+  background: 0;
+  outline: none;
+}
+
 .user-page .userPageRightSide .rightSideMain table {
   width: 100%;
+}
+
+.user-page .userPageRightSide .rightSideMain table .user_name {
+  padding-left: 20px;
 }
 
 .user-page .userPageRightSide .rightSideMain tr {

@@ -1,5 +1,8 @@
+$main_color: #F4F7FC;
+$active_color: #275A53;
+
 .user-page {
-    background: #F4F7FC;
+    background: $main_color;
     display: flex;
 
     .userPageLeftSide {
@@ -8,8 +11,33 @@
         padding-left: 5%;
         background: white;
 
+        .user-page-link {
+            .active_link {
+                color: $active_color;
+                font-weight: 500;
+    
+                &:hover {
+                    text-decoration: none;
+                    cursor: context-menu;
+                }
+            }
+    
+            .dashboard_logo {
+                width: 15px;
+                height: 15px;
+            }
+
+            .dashboard_link {
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
         .userPageLogo {
-            width: 150px;
+            width: 120px;
             margin: 50px 0 30px 0;
         }
     }
@@ -21,22 +49,34 @@
             margin: 25px;
             border-radius: 15px;
             padding: 15px;
+            background-color: white;
+            max-height: 600px;
 
             th {
                 text-align: inherit;
                 font-size: 15px;
                 font-weight: 500;
                 color: #9a9a9a;
-                background: lightgray;
+                background: $main_color;
                 padding: 10px;
             }
             
             td {
                 padding: 10px;
+                
+                select {
+                    border: 0;
+                    background: 0;
+                    outline: none;
+                }
             }
             
             table {
                 width: 100%;
+
+                .user_name {
+                    padding-left: 20px;
+                }
             }
             
             tr {
