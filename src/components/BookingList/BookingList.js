@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './BookingList.css';
 import logo from '../../images/logos/Logo.png';
-import booking_photo from '../../images/logos/map-marker-alt-solid 1.png'
-import add_house from '../../images/logos/plus 1.png'
-import my_rent from '../../images/logos/Rent.png'
+import booking_photo from '../../images/logos/map-marker-alt-solid 1.png';
+import add_house from '../../images/logos/plus 1.png';
+import my_rent from '../../images/logos/Rent.png';
 
 
 const BookingList = () => {
