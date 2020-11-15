@@ -1,4 +1,12 @@
-$my : red;
-div{
-   color : $my
-}
+*{
+   margin : 0;
+   padding : 0;
+   box-sizing : border-box;
+ }
+ div {
+    width:100vw;
+    height:100vh;
+   color: rgb(72, 189, 228);
+   display:grid;
+   place-items: center;
+ }

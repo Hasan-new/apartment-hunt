@@ -1,10 +1,9 @@
-import './App.scss';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hasan</h1>
-      fjfj
+    <div className="inverse">
+      <h1>Welcome to Appoinment Hunt</h1>
     </div>
   );
 }
