@@ -1,0 +1,21 @@
+$hover_btn_color: #1e5049;
+
+.user-page {
+    .userPageRightSide {
+        .rightSideMain {
+            .rent_btn {
+                padding: 5px 15px;
+                font-size: 14px;
+                background: #275A53;
+                color: white;
+                border: 1px solid $hover_btn_color;
+                border-radius: 5px;
+                transition: .2s;
+
+                &:hover {
+                    background: $hover_btn_color;
+                }
+            }
+        }
+    }
+}
