@@ -1,0 +1,93 @@
+.user-page {
+  background: #F4F7FC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-page .userPageLeftSide {
+  width: 21%;
+  height: 100vh;
+  padding-left: 5%;
+  background: white;
+}
+
+.user-page .userPageLeftSide .user-page-link .active_link {
+  color: #275A53;
+  font-weight: 500;
+}
+
+.user-page .userPageLeftSide .user-page-link .active_link:hover {
+  text-decoration: none;
+  cursor: context-menu;
+}
+
+.user-page .userPageLeftSide .user-page-link .dashboard_logo {
+  width: 15px;
+  height: 15px;
+}
+
+.user-page .userPageLeftSide .user-page-link .dashboard_link {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.user-page .userPageLeftSide .user-page-link .dashboard_link:hover {
+  text-decoration: underline;
+}
+
+.user-page .userPageLeftSide .userPageLogo {
+  width: 120px;
+  margin: 50px 0 30px 0;
+}
+
+.user-page .userPageRightSide {
+  width: 80%;
+}
+
+.user-page .userPageRightSide .rightSideMain {
+  margin: 25px;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: white;
+  max-height: 600px;
+}
+
+.user-page .userPageRightSide .rightSideMain th {
+  text-align: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  color: #9a9a9a;
+  background: #F4F7FC;
+  padding: 10px;
+}
+
+.user-page .userPageRightSide .rightSideMain td {
+  padding: 10px;
+}
+
+.user-page .userPageRightSide .rightSideMain td select {
+  border: 0;
+  background: 0;
+  outline: none;
+}
+
+.user-page .userPageRightSide .rightSideMain table {
+  width: 100%;
+}
+
+.user-page .userPageRightSide .rightSideMain table .user_name {
+  padding-left: 20px;
+}
+
+.user-page .userPageRightSide .rightSideMain tr {
+  vertical-align: baseline;
+}
+
+.user-page .userPageRightSide .rightSideListText {
+  background: white;
+  padding: 20px 40px;
+  font-size: 23px;
+  font-weight: 700;
+}
+/*# sourceMappingURL=BookingList.css.map */
