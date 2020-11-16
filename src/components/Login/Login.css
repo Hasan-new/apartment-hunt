@@ -1,0 +1,133 @@
+.loginArea, .createAccount {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+.loginArea .loginCreateForm, .createAccount .loginCreateForm {
+  margin: auto !important;
+  border: 1px solid #b1b1b1;
+  padding: 25px 40px;
+  width: 35%;
+}
+
+.loginArea .loginCreateForm h2, .createAccount .loginCreateForm h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.loginArea .loginCreateForm .loginCreateFormInput, .createAccount .loginCreateForm .loginCreateFormInput {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid lightgray;
+  padding: 5px 0;
+  margin-top: 15px;
+  width: 100%;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  outline: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.loginArea .loginCreateForm .loginCreateFormInput::-webkit-input-placeholder, .createAccount .loginCreateForm .loginCreateFormInput::-webkit-input-placeholder {
+  color: black;
+  font-weight: 400;
+}
+
+.loginArea .loginCreateForm .loginCreateFormInput:-ms-input-placeholder, .createAccount .loginCreateForm .loginCreateFormInput:-ms-input-placeholder {
+  color: black;
+  font-weight: 400;
+}
+
+.loginArea .loginCreateForm .loginCreateFormInput::-ms-input-placeholder, .createAccount .loginCreateForm .loginCreateFormInput::-ms-input-placeholder {
+  color: black;
+  font-weight: 400;
+}
+
+.loginArea .loginCreateForm .loginCreateFormInput::placeholder, .createAccount .loginCreateForm .loginCreateFormInput::placeholder {
+  color: black;
+  font-weight: 400;
+}
+
+.loginArea .loginCreateForm .loginCreateFormInput:focus, .createAccount .loginCreateForm .loginCreateFormInput:focus {
+  border-bottom: 2px solid #8cb9f1;
+}
+
+.loginArea .loginCreateForm .checkboxRemember, .createAccount .loginCreateForm .checkboxRemember {
+  float: left;
+  width: 12px;
+  margin: 0;
+}
+
+.loginArea .loginCreateForm .rememberMe, .createAccount .loginCreateForm .rememberMe {
+  float: left;
+  margin: 0;
+  margin-left: 5px;
+  color: black;
+}
+
+.loginArea .loginCreateForm .forgotPassword, .createAccount .loginCreateForm .forgotPassword {
+  color: #275A53;
+  font-weight: 500;
+}
+
+.loginArea .loginCreateForm .loginCreateBtn, .createAccount .loginCreateForm .loginCreateBtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #275A53;
+  color: white;
+  -webkit-transition: .2s;
+  transition: .2s;
+  border: 1px solid #165048;
+}
+
+.loginArea .loginCreateForm .loginCreateBtn:hover, .createAccount .loginCreateForm .loginCreateBtn:hover {
+  background-color: #165048;
+}
+
+.loginArea .loginCreateForm .dontHaveAccount, .createAccount .loginCreateForm .dontHaveAccount {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.loginArea .loginCreateForm .loginTxt, .createAccount .loginCreateForm .loginTxt {
+  color: #275A53;
+  font-weight: 500;
+}
+
+.loginArea .loginCreateForm .createAccountTxt, .createAccount .loginCreateForm .createAccountTxt {
+  color: #275A53;
+  font-weight: 500;
+}
+
+.loginArea .orSection, .createAccount .orSection {
+  width: 29%;
+  color: black;
+  text-align: center;
+  margin: auto;
+  padding: 15px 0;
+}
+
+.loginArea .orSection hr, .createAccount .orSection hr {
+  border-top: 1px solid #b1b1b1;
+}
+
+.loginArea .googleFbSignIn, .createAccount .googleFbSignIn {
+  width: 31%;
+  margin: 10px auto;
+  border: 1px solid #b1b1b1;
+  border-radius: 25px;
+  height: auto;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.loginArea .googleFbImage, .createAccount .googleFbImage {
+  width: 25px;
+  height: auto;
+  float: left;
+}
+/*# sourceMappingURL=Login.css.map */

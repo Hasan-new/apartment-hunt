@@ -1,0 +1,119 @@
+$loginCreateColor: #275A53;
+$loginCreateHoverColor: #165048;
+$fw500: 500;
+
+.loginArea, .createAccount {
+    padding-top: 120px;
+    padding-bottom: 100px;
+
+    .loginCreateForm {
+        margin: auto !important;
+        border: 1px solid #b1b1b1;
+        padding: 25px 40px;
+        width: 35%;
+
+        h2 {
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .loginCreateFormInput {
+            background: none;
+            border: 0;
+            border-bottom: 2px solid lightgray;
+            padding: 5px 0;
+            margin-top: 15px;
+            width: 100%;
+            font-weight: 600;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            outline: none;
+            transition: .3s;
+
+            &::placeholder {
+                color: black;
+                font-weight: 400;
+            }
+
+            &:focus {
+                border-bottom: 2px solid #8cb9f1;
+            }
+        }
+
+        .checkboxRemember {
+            float: left;
+            width: 12px;
+            margin: 0;
+        }
+
+        .rememberMe {
+            float: left;
+            margin: 0;
+            margin-left: 5px;
+            color: black;
+        }
+
+        .forgotPassword {
+            color: $loginCreateColor;
+            font-weight: $fw500;
+        }
+
+        .loginCreateBtn {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: $loginCreateColor;
+            color: white;
+            transition: .2s;
+            border: 1px solid $loginCreateHoverColor;
+
+            &:hover {
+                background-color: $loginCreateHoverColor;
+            }
+        }
+
+        .dontHaveAccount {
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .loginTxt {
+            color: $loginCreateColor;
+            font-weight: $fw500;
+        }
+
+        .createAccountTxt {
+            color: $loginCreateColor;
+            font-weight: $fw500;
+        }
+    }
+
+    .orSection {
+        width: 29%;
+        color: black;
+        text-align: center;
+        margin: auto;
+        padding: 15px 0;
+
+        hr {
+            border-top: 1px solid #b1b1b1;
+        }
+    }
+
+    .googleFbSignIn {
+        width: 31%;
+        margin: 10px auto;
+        border: 1px solid #b1b1b1;
+        border-radius: 25px;
+        height: auto;
+        padding: 6px;
+        cursor: pointer;
+    }
+    
+    .googleFbImage {
+        width: 25px;
+        height: auto;
+        float: left;
+    }
+}
