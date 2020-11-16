@@ -72,8 +72,8 @@ const Houses = () => {
 
          <Row >
             {
-               fakeData.map( data=>{
-                  return <HouseDetails data={data}></HouseDetails>
+               fakeData.map( (data,i)=>{
+                  return <HouseDetails key={"house"+i} data={data}></HouseDetails>
                })
             }
          </Row>

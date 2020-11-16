@@ -1,0 +1,27 @@
+.footer-container {
+  height: 413px;
+  width: 100vw;
+  background: #275A53;
+}
+
+.footer-column {
+  color: white;
+}
+
+.footer-column p, .footer-column h3 {
+  color: white;
+}
+
+.social-image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.social-image-container div {
+  margin-left: 10px;
+}
+/*# sourceMappingURL=Footer.css.map */

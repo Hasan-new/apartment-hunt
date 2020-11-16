@@ -2,7 +2,6 @@ import React from 'react';
 import {  Button, Col } from 'react-bootstrap';
 import './HouseDetails.css'
 const HouseDetails = ({data}) => {
-   console.log(data)
    return (
       <Col md={4} sm={6} xs={12} className="mb-5">
          <img style={{width:"100%", borderRadius:"3px"}} src={data.img} alt=""/>
