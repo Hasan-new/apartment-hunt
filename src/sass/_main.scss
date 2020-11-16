@@ -1,1 +1,5 @@
 $main-color:#275A53;
+@mixin my-button{
+      background-color:$main-color !important ;
+      border:none !important;
+}

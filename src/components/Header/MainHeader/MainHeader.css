@@ -1,0 +1,31 @@
+.main-header {
+  background: red;
+  height: 446px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-items: center;
+}
+
+.submit-button {
+  background-color: #275A53 !important;
+  border: none !important;
+}
+
+.search-field {
+  width: 40%;
+}
+
+.search-box {
+  width: 80%;
+  min-width: 250px;
+}
+/*# sourceMappingURL=MainHeader.css.map */
