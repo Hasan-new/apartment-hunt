@@ -6,6 +6,8 @@ import MyRent from './components/MyRent/MyRent';
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Apartment from './components/Apartment/Apartment';
+import Register from './components/Register/Register';
+import Login from './components/Login/Login';
 function App() {
   return (
     <div>
@@ -36,6 +38,15 @@ function App() {
           <Route exact path="/apartment/:id">
             <Apartment></Apartment>
           </Route>
+
+          <Route exact path="/register">
+            <Register></Register>
+          </Route>
+          <Route exact path="/login">
+            <Login></Login>
+          </Route>
+
+          
 
         </Switch>
       </Router>
