@@ -15,25 +15,25 @@ const Login = () => {
                         <label className="rememberMe" htmlFor="remember">Remember Me</label>
                     </div>
                     <div>
-                        <Link className="text-warning" to='/login'>Forgot Password</Link>
+                        <Link className="forgotPassword" to='/login'>Forgot Password</Link>
                     </div>
                 </div>
                 {/* {
                     data.success ? <p></p> : <p className="text-danger m-0 text-center" style={{fontSize: '14px'}}>{data.error}</p>
                 } */}
-                <button type="submit" className="btn btn-warning loginCreateBtn">Login</button>
-                <p className="text-dark dontHaveAccount text-center">Don't have an account? <Link to="/create-new-account" className="text-warning">Create an account</Link></p>
+                <button type="submit" className="btn loginCreateBtn">Login</button>
+                <p className="text-dark dontHaveAccount text-center">Don't have an account? <Link to="/register" className="createAccountTxt">Create an account</Link></p>
             </form>
             <div className="orSection">
                 <hr style={{width: '45%', float: 'left'}}/><span>Or</span><hr style={{width: '45%', float: 'right'}}/>
             </div>
             <div className="googleFbSignIn">
-                <img className="googleFbImage" src="https://i.ibb.co/68y93F9/google.png" alt=""/>
-                <p className="m-0 text-center">Continue with Google</p>
-            </div>
-            <div className="googleFbSignIn">
                 <img className="googleFbImage" src="https://i.ibb.co/ZhnqwJs/fb.png" alt=""/>
                 <p className="m-0 text-center">Continue with Facebook</p>
+            </div>
+            <div className="googleFbSignIn">
+                <img className="googleFbImage" src="https://i.ibb.co/68y93F9/google.png" alt=""/>
+                <p className="m-0 text-center">Continue with Google</p>
             </div>
         </div>
     );

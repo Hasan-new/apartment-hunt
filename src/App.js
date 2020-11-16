@@ -3,9 +3,11 @@ import AddHouse from './components/AddHouse/AddHouse';
 import BookingList from './components/BookingList/BookingList';
 import Home from './components/Home/Home';
 import MyRent from './components/MyRent/MyRent';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Login from './components/Login/Login';
+import Apartment from './components/Apartment/Apartment';
 function App() {
   return (
     <div>
@@ -21,20 +23,28 @@ function App() {
             <Home></Home>
           </Route>
           
-          <Route path="/booking-list">
+          <Route exact path="/booking-list">
             <BookingList></BookingList>
           </Route>
 
-          <Route path="/add-house">
+          <Route exact path="/add-house">
             <AddHouse></AddHouse>
+          </Route>
+
+          <Route exact path="/my-rent">
+            <MyRent></MyRent>
           </Route>
 
           <Route path="/login">
             <Login></Login>
           </Route>
 
-          <Route path="/my-rent">
-            <MyRent></MyRent>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
+
+          <Route exact path="/apartment/:id">
+            <Apartment></Apartment>
           </Route>
 
         </Switch>

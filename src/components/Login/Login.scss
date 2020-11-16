@@ -1,5 +1,10 @@
-.loginArea {
-    padding-top: 150px;
+$loginCreateColor: #275A53;
+$loginCreateHoverColor: #165048;
+$fw500: 500;
+
+.loginArea, .createAccount {
+    padding-top: 120px;
+    padding-bottom: 100px;
 
     .loginCreateForm {
         margin: auto !important;
@@ -7,22 +12,31 @@
         padding: 25px 40px;
         width: 35%;
 
+        h2 {
+            font-size: 25px;
+            font-weight: 700;
+        }
+
         .loginCreateFormInput {
             background: none;
+            border: 0;
             border-bottom: 2px solid lightgray;
             padding: 5px 0;
-            margin-top: 25px;
-            border: 0;
-            // background-color: #e4e4e4;
+            margin-top: 15px;
             width: 100%;
-            // padding: 10px 20px;
             font-weight: 600;
             margin-bottom: 10px;
             border-radius: 3px;
+            outline: none;
+            transition: .3s;
 
             &::placeholder {
                 color: black;
                 font-weight: 400;
+            }
+
+            &:focus {
+                border-bottom: 2px solid #8cb9f1;
             }
         }
 
@@ -39,16 +53,39 @@
             color: black;
         }
 
+        .forgotPassword {
+            color: $loginCreateColor;
+            font-weight: $fw500;
+        }
+
         .loginCreateBtn {
             margin-top: 20px;
             width: 100%;
             padding: 10px 20px;
+            background-color: $loginCreateColor;
+            color: white;
+            transition: .2s;
+            border: 1px solid $loginCreateHoverColor;
+
+            &:hover {
+                background-color: $loginCreateHoverColor;
+            }
         }
 
         .dontHaveAccount {
             font-size: 14px;
             margin-top: 10px;
             margin-bottom: 5px;
+        }
+
+        .loginTxt {
+            color: $loginCreateColor;
+            font-weight: $fw500;
+        }
+
+        .createAccountTxt {
+            color: $loginCreateColor;
+            font-weight: $fw500;
         }
     }
 

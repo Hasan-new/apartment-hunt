@@ -1,0 +1,26 @@
+@import '../../sass/main';
+.apartment-container{
+   font-family: $font-p;
+}
+.apartment-header{
+   height: 269px;
+   width: 100vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   place-items: center;
+   h1{
+      color:white;
+      font-family: $font-p;
+      font-weight: 600;
+   }
+}
+
+.apartment-price{
+   color: $main-color;
+}
+
+.form-button{
+   @include my-button;
+   width:100%;
+}
