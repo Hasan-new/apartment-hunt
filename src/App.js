@@ -8,9 +8,9 @@ function App() {
   return (
     <div>
       {/* <Home></Home> */}
-      {/* <BookingList></BookingList> */}
+      <BookingList></BookingList>
       {/* <AddHouse></AddHouse> */}
-      <MyRent></MyRent>
+      {/* <MyRent></MyRent> */}
     </div>
   );
 }
