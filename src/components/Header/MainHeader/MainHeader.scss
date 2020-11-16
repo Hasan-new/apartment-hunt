@@ -1,0 +1,20 @@
+@import '../../../sass/main';
+.main-header{
+   background: red;
+   height: 446px;
+   width: 100vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   place-items: center;
+}
+.submit-button{
+   @include my-button;
+}
+.search-field{
+ width:40%;
+}
+.search-box{
+   width:80%;
+   min-width:250px;
+}

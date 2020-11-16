@@ -2,8 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "Header.scss",
-        "../../sass/_main.scss"
+        "Header.scss"
     ],
     "names": [],
     "file": "Header.css"

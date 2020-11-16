@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,iBAAiB,CAAA;EACd,WAAW,ECKN,SAAS,EAAE,UAAU;EDJ1B,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;CAMd;;AATD,AAKG,iBALc,CAKd,EAAE,CAAA;EACC,WAAW,EAAC,GAAG;CACjB",
+    "sources": [
+        "Houses.scss",
+        "../../../sass/_main.scss"
+    ],
+    "names": [],
+    "file": "Houses.css"
+}
