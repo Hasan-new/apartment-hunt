@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import HeaderNavbar from '../Header/HeaderNavbar/HeaderNavbar';
 import './Register.css';
 
 const Register = () => {
     return (
-        <div className="createAccount">
+        <>
+        <HeaderNavbar></HeaderNavbar>
+            <div className="createAccount">
             <form className="loginCreateForm detailFormArea" action="">
                 <h2 className="text-dark">Create an account</h2>
                 <input className="loginCreateFormInput" type="text" name="firstName" placeholder="First Name" required/>
@@ -32,7 +35,8 @@ const Register = () => {
                 </div>
                 
                 
-        </div>
+            </div>
+        </>
     );
 };
 

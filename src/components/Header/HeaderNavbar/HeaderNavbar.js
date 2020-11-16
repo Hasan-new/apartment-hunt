@@ -21,7 +21,9 @@ const HeaderNavbar = () => {
                         <Nav.Link href="#concern">Concern</Nav.Link>
                         <Nav.Link href="#event">Event</Nav.Link>
                         <Nav.Link href="#contact">Contact</Nav.Link>
-                        <Button className=" py-0 m-1 login-btn">Login</Button>
+                        <Button className=" py-0 m-1 login-btn">
+                           <Link style={{color:"white"}} to="/login">Login</Link>
+                        </Button>
                      </Nav>
                   </Navbar.Collapse>
          </Navbar>
