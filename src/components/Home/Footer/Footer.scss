@@ -1,0 +1,19 @@
+@import '../../../sass/main';
+.footer-container{
+   height: 413px;
+   width: 100vw;
+   background: $main-color;
+}
+.footer-column{
+   color: white;
+   p,h3 {
+      color: white;
+   }
+}
+.social-image-container{
+   display: flex;
+   justify-content: left;
+   div{
+      margin-left:10px;
+   }
+}
