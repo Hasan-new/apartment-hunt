@@ -7,7 +7,7 @@ import linkedin from '../../../images/logos/linkedin.png'
 import youtube from '../../../images/logos/youtube.png'
 const Footer = () => {
    return (
-      <div className="footer-container p-5" >
+      <div id="contact" className="footer-container p-5" >
          <Row >
             <Col md={4} className="footer-column mt-3">
                <p style={{color:"white"}}>

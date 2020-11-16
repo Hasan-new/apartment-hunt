@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import MyRent from './components/MyRent/MyRent';
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Apartment from './components/Apartment/Apartment';
 function App() {
   return (
     <div>
@@ -20,16 +21,20 @@ function App() {
             <Home></Home>
           </Route>
           
-          <Route path="/booking-list">
+          <Route exact path="/booking-list">
             <BookingList></BookingList>
           </Route>
 
-          <Route path="/add-house">
+          <Route exact path="/add-house">
             <AddHouse></AddHouse>
           </Route>
 
-          <Route path="/my-rent">
+          <Route exact path="/my-rent">
             <MyRent></MyRent>
+          </Route>
+
+          <Route exact path="/apartment/:id">
+            <Apartment></Apartment>
           </Route>
 
         </Switch>
