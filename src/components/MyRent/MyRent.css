@@ -1,0 +1,15 @@
+.user-page .userPageRightSide .rightSideMain .rent_btn {
+  padding: 5px 15px;
+  font-size: 14px;
+  background: #275A53;
+  color: white;
+  border: 1px solid #1e5049;
+  border-radius: 5px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.user-page .userPageRightSide .rightSideMain .rent_btn:hover {
+  background: #1e5049;
+}
+/*# sourceMappingURL=MyRent.css.map */

@@ -29,6 +29,7 @@
 
 .user-page .userPageLeftSide .user-page-link .dashboard_link {
   cursor: pointer;
+  font-weight: 500;
 }
 
 .user-page .userPageLeftSide .user-page-link .dashboard_link:hover {

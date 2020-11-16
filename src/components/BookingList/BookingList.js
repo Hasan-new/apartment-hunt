@@ -24,7 +24,7 @@ const BookingList = () => {
                         {/* <Link className="serviceListLink inactive-color" to="/admin/add-service"> */}
                             <div className="d-flex justify-content-left dashboard_link align-items-center my-3">
                                 <img className="dashboard_logo" src={add_house} alt=""/>
-                                <p className="mx-0 my-0 ml-2">Add House</p>
+                                <p className="mx-0 my-0 ml-2">Add Rent House</p>
                             </div>
                         {/* </Link> */}
                         {/* <Link className="reviewLink inactive-color" to="/admin/add-admin"> */}
