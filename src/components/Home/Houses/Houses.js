@@ -77,7 +77,7 @@ const fakeData =[
 
 const Houses = () => {
    return (
-      <div className="houses-container ">
+      <div id="house" className="houses-container ">
          <div className="text-center mb-5 mt-3">
             <p className="m-0 p-2">House Rent</p>
             <h3 style={{fontSize:"34px"}} className="m-0 p-0">Discover the latest Rent <br/> available today</h3>
