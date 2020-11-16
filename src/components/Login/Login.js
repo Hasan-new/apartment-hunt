@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HeaderNavbar from '../Header/HeaderNavbar/HeaderNavbar';
 import './Login.css';
-
+import {googleSignInHandle, facebookSignInHandle} from '../../common/common.js'
 const Login = () => {
     return (
         <>
@@ -30,11 +30,11 @@ const Login = () => {
                     <div className="orSection">
                         <hr style={{width: '45%', float: 'left'}}/><span>Or</span><hr style={{width: '45%', float: 'right'}}/>
                     </div>
-                    <div className="googleFbSignIn">
+                    <div onClick={facebookSignInHandle} className="googleFbSignIn">
                         <img className="googleFbImage" src="https://i.ibb.co/ZhnqwJs/fb.png" alt=""/>
                         <p className="m-0 text-center">Continue with Facebook</p>
                     </div>
-                    <div className="googleFbSignIn">
+                    <div onClick={googleSignInHandle} className="googleFbSignIn">
                         <img className="googleFbImage" src="https://i.ibb.co/68y93F9/google.png" alt=""/>
                         <p className="m-0 text-center">Continue with Google</p>
                     </div>

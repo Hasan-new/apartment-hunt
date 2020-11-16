@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HeaderNavbar from '../Header/HeaderNavbar/HeaderNavbar';
 import './Register.css';
-
+import {googleSignInHandle} from '../../common/common.js'
 const Register = () => {
+    
     return (
         <>
         <HeaderNavbar></HeaderNavbar>
@@ -29,7 +30,7 @@ const Register = () => {
                     <img className="googleFbImage" src="https://i.ibb.co/ZhnqwJs/fb.png" alt=""/>
                     <p className="m-0 text-center">Continue with Facebook</p>
                 </div>
-                <div className="googleFbSignIn">
+                <div onClick={googleSignInHandle} className="googleFbSignIn">
                     <img className="googleFbImage" src="https://i.ibb.co/68y93F9/google.png" alt=""/>
                     <p className="m-0 text-center">Continue with Google</p>
                 </div>

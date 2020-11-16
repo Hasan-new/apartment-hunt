@@ -8,7 +8,22 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Apartment from './components/Apartment/Apartment';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
+import firebase from "firebase/app";
+import "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBEKZ71feSxDx5Wo-3nD6vo__BIuCK9oBE",
+  authDomain: "apartmenthunt-f6708.firebaseapp.com",
+  databaseURL: "https://apartmenthunt-f6708.firebaseio.com",
+  projectId: "apartmenthunt-f6708",
+  storageBucket: "apartmenthunt-f6708.appspot.com",
+  messagingSenderId: "263060252371",
+  appId: "1:263060252371:web:34ac12a45c922293175626"
+};
+firebase.initializeApp(firebaseConfig);
+
 function App() {
+
   return (
     <div>
       {/* <Home></Home>
