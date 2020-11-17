@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import HeaderNavbar from '../Header/HeaderNavbar/HeaderNavbar';
 import './Login.css';
@@ -7,6 +7,7 @@ import {connect} from 'react-redux'
 import firebase from "firebase/app";
 
 const Login = (props) => {
+    const [loginData, setLoginData]=useState({})
     const location = useLocation()
     const history = useHistory()
     const googleSignInHandle = ()=>{
@@ -36,14 +37,39 @@ const Login = (props) => {
            history.replace(location.location?.pathname || "/")
         })
      }
+
+     // login form 
+     const inputHandler = (event) =>{
+        setLoginData(
+             { ...loginData,
+                 [event.target.name]:event.target.value
+             }
+         )
+     }
+     const formHandler =(event)=>{
+         console.log(loginData.password)
+         event.preventDefault()
+         firebase.auth().signInWithEmailAndPassword(loginData.email, loginData.password)
+        .then(result=>{
+            const info = {
+                email: result.user.email,
+                name: result.user.displayName,
+                photoUrl: result.user.photoURL
+            }
+           props.googleSignin(info)
+            history.replace(location.location?.pathname || "/")
+        })
+     }
+
+
     return (
         <>
         <HeaderNavbar></HeaderNavbar>
             <div className="loginArea">
-            <form className="loginCreateForm detailFormArea" action="">
+            <form className="loginCreateForm detailFormArea"  onSubmit={formHandler}>
                 <h2 className="text-dark">Login</h2>
-                <input className="loginCreateFormInput" name="email" type="text" id="origin" placeholder="Username or Email" required/>
-                <input className="loginCreateFormInput" name="password" type="password" id="Password" placeholder="Password" required/>
+                <input onBlur={(event)=>inputHandler(event)} className="loginCreateFormInput" name="email" type="text" id="origin" placeholder="Username or Email" required/>
+                <input onBlur={(event)=>inputHandler(event)} className="loginCreateFormInput" name="password" type="password" id="Password" placeholder="Password" required/>
                 <div className="d-flex align-items-center justify-content-between my-3">
                     <div className="d-flex align-items-center">
                         <input className="checkboxRemember" type="checkbox" name="Remember me" id="remember"/>
@@ -62,11 +88,11 @@ const Login = (props) => {
                     <div className="orSection">
                         <hr style={{width: '45%', float: 'left'}}/><span>Or</span><hr style={{width: '45%', float: 'right'}}/>
                     </div>
-                    <div onClick={facebookSignInHandle} className="googleFbSignIn">
+                    <div onBlur={facebookSignInHandle} className="googleFbSignIn">
                         <img className="googleFbImage" src="https://i.ibb.co/ZhnqwJs/fb.png" alt=""/>
                         <p className="m-0 text-center">Continue with Facebook</p>
                     </div>
-                    <div onClick={googleSignInHandle} className="googleFbSignIn">
+                    <div onBlur={googleSignInHandle} className="googleFbSignIn">
                         <img className="googleFbImage" src="https://i.ibb.co/68y93F9/google.png" alt=""/>
                         <p className="m-0 text-center">Continue with Google</p>
                     </div>

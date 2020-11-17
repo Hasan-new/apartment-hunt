@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import HeaderNavbar from '../Header/HeaderNavbar/HeaderNavbar';
 import './Register.css';
@@ -6,7 +6,9 @@ import firebase from "firebase/app";
 import {connect} from 'react-redux'
 import { facebookSignin, googleSignin } from '../../Redux/actions/actions';
 
+
 const Register = (props) => {
+    const [inputData, setInputData]=useState({})
     const location = useLocation()
     const history = useHistory()
     const googleSignInHandle = ()=>{
@@ -35,17 +37,35 @@ const Register = (props) => {
            history.replace(location.location?.pathname || "/")
         })
      }
+
+     // registation form
+     const inputHandler = (event) =>{
+        setInputData(
+             { ...inputData,
+                 [event.target.name]:event.target.value
+             }
+         )
+     }
+     const formHandler =(event)=>{
+         console.log(inputData)
+         event.preventDefault()
+         firebase.auth().createUserWithEmailAndPassword(inputData.email, inputData.password)
+        .then(result=>{
+            console.log(result)
+            history.push("/login")
+        })
+     }
     return (
         <>
         <HeaderNavbar></HeaderNavbar>
             <div className="createAccount">
-            <form className="loginCreateForm detailFormArea" action="">
+            <form className="loginCreateForm detailFormArea" onSubmit={formHandler}>
                 <h2 className="text-dark">Create an account</h2>
-                <input className="loginCreateFormInput" type="text" name="firstName" placeholder="First Name" required/>
-                <input className="loginCreateFormInput" type="text" name="lastName" placeholder="Last Name" required/>
-                <input className="loginCreateFormInput" type="text" name="email" placeholder="Username or Email" required/>
-                <input className="loginCreateFormInput" type="password" name="password" placeholder="Password" required/>
-                <input className="loginCreateFormInput" type="password" name="confirmPassword" placeholder="Confirm Password" required/>
+                <input onBlur={(event)=>inputHandler(event)} className="loginCreateFormInput" type="text" name="firstName" placeholder="First Name" required/>
+                <input onBlur={(event)=>inputHandler(event)} className="loginCreateFormInput" type="text" name="lastName" placeholder="Last Name" required/>
+                <input onBlur={(event)=>inputHandler(event)} className="loginCreateFormInput" type="text" name="email" placeholder="Username or Email" required/>
+                <input onBlur={(event)=>inputHandler(event)} className="loginCreateFormInput" type="password" name="password" placeholder="Password" required/>
+                <input onBlur={(event)=>inputHandler(event)} className="loginCreateFormInput" type="password" name="confirmPassword" placeholder="Confirm Password" required/>
                 {/* {
                     userData.success ? <p className="text-success text-center m-0">Account created successfully. Please login</p> : <p className="text-danger text-center m-0">{userData.error}</p>
                 } */}
