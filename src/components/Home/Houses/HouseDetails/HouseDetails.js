@@ -1,5 +1,6 @@
 import React from 'react';
 import {  Button, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './HouseDetails.css'
 const HouseDetails = ({data}) => {
    return (
@@ -13,7 +14,7 @@ const HouseDetails = ({data}) => {
                <span style={{fontWeight:"400", fontSize:"15px"}} className="ml-4">{data.bathroom} bathroom</span>
                <div className="mt-3" style={{display:"flex", justifyContent:"space-between"}}>
                   <h2 className="house-price">${data.price}</h2>
-                  <Button  className="view-button py-0 my-1">View Details</Button>
+                  <Link to={'/apartment/'+data._id}><Button  className="view-button my-1">View Details</Button></Link>
                </div>
             </div>
             

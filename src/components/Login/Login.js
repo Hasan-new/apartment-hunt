@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import HeaderNavbar from '../Header/HeaderNavbar/HeaderNavbar';
 import './Login.css';
 
 const Login = () => {
     return (
-        <div className="loginArea">
+        <>
+        <HeaderNavbar></HeaderNavbar>
+            <div className="loginArea">
             <form className="loginCreateForm detailFormArea" action="">
                 <h2 className="text-dark">Login</h2>
                 <input className="loginCreateFormInput" name="email" type="text" id="origin" placeholder="Username or Email" required/>
@@ -23,19 +26,20 @@ const Login = () => {
                 } */}
                 <button type="submit" className="btn loginCreateBtn">Login</button>
                 <p className="text-dark dontHaveAccount text-center">Don't have an account? <Link to="/register" className="createAccountTxt">Create an account</Link></p>
-            </form>
-            <div className="orSection">
-                <hr style={{width: '45%', float: 'left'}}/><span>Or</span><hr style={{width: '45%', float: 'right'}}/>
-            </div>
-            <div className="googleFbSignIn">
-                <img className="googleFbImage" src="https://i.ibb.co/ZhnqwJs/fb.png" alt=""/>
-                <p className="m-0 text-center">Continue with Facebook</p>
-            </div>
-            <div className="googleFbSignIn">
-                <img className="googleFbImage" src="https://i.ibb.co/68y93F9/google.png" alt=""/>
-                <p className="m-0 text-center">Continue with Google</p>
-            </div>
-        </div>
+                    </form>
+                    <div className="orSection">
+                        <hr style={{width: '45%', float: 'left'}}/><span>Or</span><hr style={{width: '45%', float: 'right'}}/>
+                    </div>
+                    <div className="googleFbSignIn">
+                        <img className="googleFbImage" src="https://i.ibb.co/ZhnqwJs/fb.png" alt=""/>
+                        <p className="m-0 text-center">Continue with Facebook</p>
+                    </div>
+                    <div className="googleFbSignIn">
+                        <img className="googleFbImage" src="https://i.ibb.co/68y93F9/google.png" alt=""/>
+                        <p className="m-0 text-center">Continue with Google</p>
+                    </div>
+                </div>
+        </>
     );
 };
 

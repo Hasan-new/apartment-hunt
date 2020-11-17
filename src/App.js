@@ -8,8 +8,6 @@ import Register from './components/Register/Register';
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Apartment from './components/Apartment/Apartment';
-import Register from './components/Register/Register';
-import Login from './components/Login/Login';
 function App() {
   return (
     <div>
