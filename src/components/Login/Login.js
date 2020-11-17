@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import HeaderNavbar from '../Header/HeaderNavbar/HeaderNavbar';
 import './Login.css';
 import {googleSignin, facebookSignin} from '../../Redux/actions/actions'
@@ -7,7 +7,8 @@ import {connect} from 'react-redux'
 import firebase from "firebase/app";
 
 const Login = (props) => {
-    console.log(props)
+    const location = useLocation()
+    const history = useHistory()
     const googleSignInHandle = ()=>{
         const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider)
@@ -18,6 +19,7 @@ const Login = (props) => {
                 photoUrl: result.user.photoURL
             }
            props.googleSignin(info)
+           history.replace(location.location?.pathname || "/")
         })
      }
 
@@ -31,6 +33,7 @@ const Login = (props) => {
                 photoUrl: result.user.photoURL
             }
            props.googleSignin(info)
+           history.replace(location.location?.pathname || "/")
         })
      }
     return (

@@ -3,7 +3,9 @@ import { Button, Nav, Navbar } from 'react-bootstrap';
 import './HeaderNavbar.css'
 import logo from '../../../images/logos/Logo.png'
 import { Link } from 'react-router-dom';
-const HeaderNavbar = () => {
+import {connect} from 'react-redux'
+const HeaderNavbar = (props) => {
+   console.log(props.isSignin)
    return (
       <>
          {/* bg="dark" variant="dark" */}
@@ -21,9 +23,12 @@ const HeaderNavbar = () => {
                         <Nav.Link href="#concern">Concern</Nav.Link>
                         <Nav.Link href="#event">Event</Nav.Link>
                         <Nav.Link href="#contact">Contact</Nav.Link>
-                        <Button className=" py-0 m-1 login-btn">
-                           <Link style={{color:"white"}} to="/login">Login</Link>
-                        </Button>
+                        {
+                           props.isSignin ? ""
+                           : <Button className=" py-0 m-1 login-btn">
+                                 <Link style={{color:"white"}} to="/login">Login</Link>
+                              </Button>
+                        }
                      </Nav>
                   </Navbar.Collapse>
          </Navbar>
@@ -31,4 +36,10 @@ const HeaderNavbar = () => {
    );
 };
 
-export default HeaderNavbar;
+const mapStateToProps = (state) => {
+   return {
+      isSignin : state.isSignin
+   }
+
+}
+export default connect(mapStateToProps)(HeaderNavbar);
