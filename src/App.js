@@ -3,11 +3,12 @@ import AddHouse from './components/AddHouse/AddHouse';
 import BookingList from './components/BookingList/BookingList';
 import Home from './components/Home/Home';
 import MyRent from './components/MyRent/MyRent';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Apartment from './components/Apartment/Apartment';
-import Register from './components/Register/Register';
-import Login from './components/Login/Login';
+
 import firebase from "firebase/app";
 import "firebase/auth";
 
@@ -48,6 +49,14 @@ function App() {
 
           <Route exact path="/my-rent">
             <MyRent></MyRent>
+          </Route>
+
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+
+          <Route path="/register">
+            <Register></Register>
           </Route>
 
           <Route exact path="/apartment/:id">

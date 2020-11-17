@@ -2,6 +2,7 @@
 .view-button{
    @include my-button;
    font-size: 13px !important;
+   padding: 9px 17px !important;
 }
 .house-price{
    font-size: 32px;

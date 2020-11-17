@@ -1,30 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './MyRent.css';
 import logo from '../../images/logos/Logo.png';
 import booking_photo from '../../images/logos/map-marker-alt-solid 1.png';
 import add_house from '../../images/logos/plus 1.png';
 import my_rent from '../../images/logos/Rent.png';
+import { Link } from 'react-router-dom';
+import SingleMyRent from './SingleMyRent/SingleMyRent';
 
 const MyRent = () => {
+    const [userBooking, setUserBooking] = useState([])
+    useEffect(() => {
+        fetch(`http://localhost:3001/get-user-booking/?email=hossain815265@gmail.com`)
+        .then(response => response.json())
+        .then(data => setUserBooking(data))
+    }, [])
     return (
         <div className="user-page">
             <div className="userPageLeftSide">
-                {/* <Link to='/'> */}
+                <Link to='/'>
                     <img className="userPageLogo" src={logo} alt=""/>
-                {/* </Link> */}
+                </Link>
                 <div className="user-page-link">
-                    {/* <Link className="userPageLink orderLink color-active" to='/admin/service-list'> */}
+                    <Link to='/booking-list'>
                         <div className="d-flex justify-content-left dashboard_link align-items-center my-3">
                             <img className="dashboard_logo" src={booking_photo} alt=""/>
                             <p className="mx-0 my-0 ml-2">Booking list</p>
                         </div>
-                    {/* </Link> */}
-                    {/* <Link className="serviceListLink inactive-color" to="/admin/add-service"> */}
+                    </Link>
+                    <Link to="/add-house">
                         <div className="d-flex justify-content-left dashboard_link align-items-center my-3">
                             <img className="dashboard_logo" src={add_house} alt=""/>
                             <p className="mx-0 my-0 ml-2">Add Rent House</p>
                         </div>
-                    {/* </Link> */}
+                    </Link>
                     {/* <Link className="reviewLink inactive-color" to="/admin/add-admin"> */}
                         <div className="d-flex justify-content-left active_link align-items-center my-3">
                             <img className="dashboard_logo" src={my_rent} alt=""/>
@@ -45,16 +53,9 @@ const MyRent = () => {
                             </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td className="user_name">Washington Avenue</td>
-                            <td>$300</td>
-                            <td className="text-center"><button className="rent_btn">View Details</button></td>
-                        </tr>
-                        <tr>
-                            <td className="user_name">Washington Avenue</td>
-                            <td>$300</td>
-                            <td className="text-center"><button className="rent_btn">View Details</button></td>
-                        </tr>
+                        {
+                            userBooking.map(singleBooking => <SingleMyRent key={singleBooking._id} data={singleBooking}></SingleMyRent>)
+                        }
                             {/* {
                                 orderedData.length === 0 && <button className="btn btn-primary m-auto" type="button" disabled>
                                 <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
