@@ -20,7 +20,7 @@ const AddHouse = () => {
         formData.append('bedroom', data.bedroom)
         formData.append('bathroom', data.bathroom)
         console.log(data)
-        fetch('http://localhost:3001/add-house', {
+        fetch('https://apartment-hunt-team.herokuapp.com/add-house', {
             method: 'POST',
             body: formData
         })

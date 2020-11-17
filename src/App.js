@@ -40,25 +40,23 @@ function App() {
             <Home></Home>
           </Route>
           
-          <Route exact path="/booking-list">
+          <PrivateRoute exact path="/booking-list">
             <BookingList></BookingList>
-          </Route>
+          </PrivateRoute>
 
-          <Route exact path="/add-house">
+          <PrivateRoute exact path="/add-house">
             <AddHouse></AddHouse>
-          </Route>
+          </PrivateRoute>
 
-          <Route exact path="/my-rent">
+          <PrivateRoute exact path="/my-rent">
             <MyRent></MyRent>
-          </Route>
+          </PrivateRoute>
 
           <Route path="/login">
             <Login></Login>
           </Route>
 
-          <Route path="/register">
-            <Register></Register>
-          </Route>
+          
 
           <PrivateRoute exact path="/apartment/:id">
             <Apartment></Apartment>

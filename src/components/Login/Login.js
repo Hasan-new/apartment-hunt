@@ -88,11 +88,11 @@ const Login = (props) => {
                     <div className="orSection">
                         <hr style={{width: '45%', float: 'left'}}/><span>Or</span><hr style={{width: '45%', float: 'right'}}/>
                     </div>
-                    <div onBlur={facebookSignInHandle} className="googleFbSignIn">
+                    <div onClick={facebookSignInHandle} className="googleFbSignIn">
                         <img className="googleFbImage" src="https://i.ibb.co/ZhnqwJs/fb.png" alt=""/>
                         <p className="m-0 text-center">Continue with Facebook</p>
                     </div>
-                    <div onBlur={googleSignInHandle} className="googleFbSignIn">
+                    <div onClick={googleSignInHandle} className="googleFbSignIn">
                         <img className="googleFbImage" src="https://i.ibb.co/68y93F9/google.png" alt=""/>
                         <p className="m-0 text-center">Continue with Google</p>
                     </div>

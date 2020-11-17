@@ -11,7 +11,7 @@ import SingleBookingList from './SingleBookingList/SingleBookingList'
 const BookingList = () => {
     const [allBooking, setAllBooking] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:3001/get-all-booking`)
+        fetch(`https://apartment-hunt-team.herokuapp.com/get-all-booking`)
         .then(response => response.json())
         .then(data => setAllBooking(data))
     }, [])

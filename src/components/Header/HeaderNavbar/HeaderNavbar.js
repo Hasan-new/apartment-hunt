@@ -18,11 +18,11 @@ const HeaderNavbar = (props) => {
                      <Nav className="text-center ml-auto">
                         
                      <Nav.Link href='#home'><Link className="p-0 m-0 text-secondary" to="/">Home</Link></Nav.Link>
-                        <Nav.Link href="#service">Service</Nav.Link>
-                        <Nav.Link href="#house">House</Nav.Link>
-                        <Nav.Link href="#concern">Concern</Nav.Link>
-                        <Nav.Link href="#event">Event</Nav.Link>
-                        <Nav.Link href="#contact">Contact</Nav.Link>
+                        <Nav.Link className="text-secondary" href="#service">Service</Nav.Link>
+                        <Nav.Link className="text-secondary" href="#house">House</Nav.Link>
+                        <Nav.Link href='#home'><Link className="p-0 m-0 text-secondary" to="/my-rent">Dashboard</Link></Nav.Link>
+                        <Nav.Link className="text-secondary" href="#event">Event</Nav.Link>
+                        <Nav.Link className="text-secondary" href="#contact">Contact</Nav.Link>
                         {
                            props.isSignin ? ""
                            : <Button className=" py-0 m-1 login-btn">

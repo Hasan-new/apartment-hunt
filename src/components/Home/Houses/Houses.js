@@ -79,7 +79,7 @@ import HouseDetails from './HouseDetails/HouseDetails';
 const Houses = () => {
    const [apartmentData, setApartmentData] = useState([])
    useEffect(() => {
-      fetch(`http://localhost:3001/apartments`)
+      fetch(`https://apartment-hunt-team.herokuapp.com/apartments`)
       .then(res => res.json())
       .then(data => setApartmentData(data))
    }, [])

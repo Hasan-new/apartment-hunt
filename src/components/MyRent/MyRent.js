@@ -6,11 +6,12 @@ import add_house from '../../images/logos/plus 1.png';
 import my_rent from '../../images/logos/Rent.png';
 import { Link } from 'react-router-dom';
 import SingleMyRent from './SingleMyRent/SingleMyRent';
-
-const MyRent = () => {
+import {connect} from 'react-redux'
+const MyRent = (props) => {
+    console.log(props)
     const [userBooking, setUserBooking] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:3001/get-user-booking/?email=hossain815265@gmail.com`)
+        fetch(`https://apartment-hunt-team.herokuapp.com/get-user-booking/?email=${props.email}`)
         .then(response => response.json())
         .then(data => setUserBooking(data))
     }, [])
@@ -73,4 +74,9 @@ const MyRent = () => {
     );
 };
 
-export default MyRent;
+const mapStateToProps = (state) => {
+    return {
+        email: state.userInfo.email
+    }
+}
+export default connect(mapStateToProps)(MyRent);

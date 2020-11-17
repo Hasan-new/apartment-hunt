@@ -14,7 +14,7 @@ const Apartment = () => {
 
    const [singleApartment, setSingleApartment] = useState({})
    useEffect(() => {
-      fetch(`http://localhost:3001/apartment/${id}`)
+      fetch(`https://apartment-hunt-team.herokuapp.com/apartment/${id}`)
       .then(res => res.json())
       .then(data => setSingleApartment(data))
    }, [])
@@ -41,7 +41,7 @@ const Apartment = () => {
         newData.title = singleApartment.title;
         newData.price = singleApartment.price;
         newData.status = "Pending";
-        fetch(`http://localhost:3001/book-apartment`, {
+        fetch(`https://apartment-hunt-team.herokuapp.com/book-apartment`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newData)
