@@ -2,9 +2,36 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HeaderNavbar from '../Header/HeaderNavbar/HeaderNavbar';
 import './Register.css';
-import {googleSignInHandle} from '../../common/common.js'
-const Register = () => {
-    
+import firebase from "firebase/app";
+import {connect} from 'react-redux'
+import { facebookSignin, googleSignin } from '../../Redux/actions/actions';
+
+const Register = (props) => {
+    console.log(props)
+    const googleSignInHandle = ()=>{
+        const provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider)
+        .then(result=>{
+            const info = {
+                email: result.user.email,
+                name: result.user.displayName,
+                photoUrl: result.user.photoURL
+            }
+           props.googleSignin(info)
+        })
+     }
+     const facebookSignInHandle = ()=>{
+        const provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(provider)
+        .then(result=>{
+            const info = {
+                email: result.user.email,
+                name: result.user.displayName,
+                photoUrl: result.user.photoURL
+            }
+           props.googleSignin(info)
+        })
+     }
     return (
         <>
         <HeaderNavbar></HeaderNavbar>
@@ -26,7 +53,7 @@ const Register = () => {
                 <div className="orSection">
                     <hr style={{width: '45%', float: 'left'}}/><span>Or</span><hr style={{width: '45%', float: 'right'}}/>
                 </div>
-                <div className="googleFbSignIn">
+                <div onClick={facebookSignInHandle} className="googleFbSignIn">
                     <img className="googleFbImage" src="https://i.ibb.co/ZhnqwJs/fb.png" alt=""/>
                     <p className="m-0 text-center">Continue with Facebook</p>
                 </div>
@@ -40,5 +67,15 @@ const Register = () => {
         </>
     );
 };
+const mapStateToProps = (state) => {
+    return { 
+        isSignin : state.isSignin,
+        userInfo : state.userInfo
+    }
+}
+const mapDispatchToProps = {
+    googleSignin:googleSignin,
+    facebookSignin:facebookSignin
+}
 
-export default Register;
+export default connect(mapStateToProps,mapDispatchToProps)(Register)

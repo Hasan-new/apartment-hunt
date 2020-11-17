@@ -2,8 +2,37 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HeaderNavbar from '../Header/HeaderNavbar/HeaderNavbar';
 import './Login.css';
-import {googleSignInHandle, facebookSignInHandle} from '../../common/common.js'
-const Login = () => {
+import {googleSignin, facebookSignin} from '../../Redux/actions/actions'
+import {connect} from 'react-redux'
+import firebase from "firebase/app";
+
+const Login = (props) => {
+    console.log(props)
+    const googleSignInHandle = ()=>{
+        const provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider)
+        .then(result=>{
+            const info = {
+                email: result.user.email,
+                name: result.user.displayName,
+                photoUrl: result.user.photoURL
+            }
+           props.googleSignin(info)
+        })
+     }
+
+     const facebookSignInHandle = ()=>{
+        const provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(provider)
+        .then(result=>{
+            const info = {
+                email: result.user.email,
+                name: result.user.displayName,
+                photoUrl: result.user.photoURL
+            }
+           props.googleSignin(info)
+        })
+     }
     return (
         <>
         <HeaderNavbar></HeaderNavbar>
@@ -43,4 +72,15 @@ const Login = () => {
     );
 };
 
-export default Login;
+const mapStateToProps = (state) => {
+    return { 
+        isSignin : state.isSignin,
+        userInfo : state.userInfo
+    }
+}
+const mapDispatchToProps = {
+    googleSignin:googleSignin,
+    facebookSignin:facebookSignin
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
