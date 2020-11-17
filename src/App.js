@@ -11,6 +11,7 @@ import Apartment from './components/Apartment/Apartment';
 
 import firebase from "firebase/app";
 import "firebase/auth";
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBEKZ71feSxDx5Wo-3nD6vo__BIuCK9oBE",
@@ -59,9 +60,9 @@ function App() {
             <Register></Register>
           </Route>
 
-          <Route exact path="/apartment/:id">
+          <PrivateRoute exact path="/apartment/:id">
             <Apartment></Apartment>
-          </Route>
+          </PrivateRoute>
 
           <Route exact path="/register">
             <Register></Register>
